@@ -130,3 +130,7 @@ c) If you already have REMOTE REPO on GitHub with all project files, you can clo
 	Push local changes to REMOTE after commits.
 	git push origin master
 
+d) Get latest code from Branch:
+	git pull origin master
+	git pull origin AnyBranchName
+
