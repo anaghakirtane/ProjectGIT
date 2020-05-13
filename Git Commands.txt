@@ -100,7 +100,6 @@ b) Delete a branch-- To delete a branch, you need to be on MASTER BRANCH.
 	Allow deleting branch if changes are ## NOT ## merged with master
 	git branch -D BranchName
 
-
 c) Merge a branch-- To merge a branch, you need to be on MASTER BRANCH.
 	git merge BranchName
 
@@ -118,6 +117,9 @@ b) Pushing local cahnges to GitHub master branch, EASY-WAY
 
 	Then push changes to GitHub remote REPO
 	git push origin master
+
+	Create NEW branch in GitHub from locally created branch
+	git push origin NewBranchName_ToBeCreated_On_Github
 
 c) If you already have REMOTE REPO on GitHub with all project files, you can clone it to local drive as below:
 	git clone Remote-URL
