@@ -1,0 +1,130 @@
+GIT Version
+==============================
+git --version
+
+
+Update Global Settings
+==============================
+git config --global user.name anaghakirtane
+git config --global user.email anaghakirtane@gmail.com
+
+
+View settings
+============================
+git config user.name
+git config user.email
+
+
+Steps to follow for making local directory as a GIT Project
+==============================================================
+--> Go to the Project folder by command prompt
+--> Execute command 
+	git init
+
+		This will create new folder (.git) in the project root folder.
+		This step is to makes this as an empty GIT Repository.
+		
+		e.g
+		C:\_Anagha\Projects\ProjectBootstrap>git init
+		Initialized empty Git repository in C:/_Anagha/Projects/ProjectBootstrap/.git/
+
+
+--> Add new files and folder you would like to have in your project.
+--> see what is changed after commits
+	git status
+
+--> To add file to staging area.
+	git add index.html
+
+--> to add all the files to staging area
+	git add .
+
+--> To ## REMOVE ## file from staging area.
+	git rm --cached index.htm
+
+--> To commit changes from staging area to repository.
+	git commit -m "Comment Here"
+
+--> To see log of all commits
+	git log
+	git log --oneline 
+
+
+Undoing Things
+==============================================================
+a) Checkout Commits
+b) Revert Commits
+c) Reset Commits
+
+a) Checkout Commit (gets the version provided by commit Hashcode)
+	Gets the specified version by hashcode
+	git checkout HashCode
+
+	Gets the latest version
+	git checkout master
+
+b) Revert Commit to specified version. You still have laters versions in repository.
+	Revert command creates new version with old code.
+	(Need to press shift and colon to upload changes.)
+	git revert HashCode
+
+c) Go back to previous version (Permanantly). All older versions will be deleted from local repository.
+
+	Local code will still be available in case you accidently executed this command and want to add the code again. 
+	git reset HashCode
+
+	This will permanantly deleted all older versions and local code too.
+	Local code will ## NOT ## be available to revert any code again. 
+	git reset HashCode --hard
+
+
+Branches
+==============================================================
+a) Create branch
+	git branch BranchName
+
+	To check list of branch and see which branch you are in.
+	git branch -a
+
+	Change your branch is to get the latest version from branch
+	git checkout BranchName
+
+	Create branch and swich on the branch with a single command
+	git checkout -b BranchName
+
+b) Delete a branch-- To delete a branch, you need to be on MASTER BRANCH.
+
+	Allow deleting branch if changes are merged with master
+	git branch -d BranchName
+
+	Allow deleting branch if changes are ## NOT ## merged with master
+	git branch -D BranchName
+
+
+c) Merge a branch-- To merge a branch, you need to be on MASTER BRANCH.
+	git merge BranchName
+
+
+GitHub
+==============================================================
+Create new Respository n GitHub and get the URL of the repository.
+a) Pushing local REPO to GitHub REPO
+	git push repo-url master
+
+
+b) Pushing local cahnges to GitHub master branch, EASY-WAY
+	Create alias for remote REPO URL
+	git remote add origin REPO-URL
+
+	Then push changes to GitHub remote REPO
+	git push origin master
+
+c) If you already have REMOTE REPO on GitHub with all project files, you can clone it to local drive as below:
+	git clone Remote-URL
+
+	To check remote URLs
+	git remote -v
+
+	Push local changes to REMOTE after commits.
+	git push origin master
+
