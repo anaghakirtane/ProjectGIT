@@ -45,6 +45,9 @@ Steps to follow for making local directory as a GIT Project
 --> To commit changes from staging area to repository.
 	git commit -m "Comment Here"
 
+--> Add all files and also to commit changes from staging area to repository.
+	git commit -a -m "Comment Here"
+
 --> To see log of all commits
 	git log
 	git log --oneline 
@@ -59,6 +62,9 @@ c) Reset Commits
 a) Checkout Commit (gets the version provided by commit Hashcode)
 	Gets the specified version by hashcode
 	git checkout HashCode
+
+	Gets the specified version by hashcode and only get specific file
+	git checkout HashCode MyFile.xyz
 
 	Gets the latest version
 	git checkout master
@@ -113,7 +119,7 @@ a) Pushing local REPO to GitHub REPO
 
 b) Pushing local cahnges to GitHub master branch, EASY-WAY
 	Create alias for remote REPO URL
-	git remote add origin REPO-URL
+	git remote add origin "Remote-URL"
 
 	Then push changes to GitHub remote REPO
 	git push origin master
@@ -122,7 +128,7 @@ b) Pushing local cahnges to GitHub master branch, EASY-WAY
 	git push origin NewBranchName_ToBeCreated_On_Github
 
 c) If you already have REMOTE REPO on GitHub with all project files, you can clone it to local drive as below:
-	git clone Remote-URL
+	git clone "Remote-URL"
 
 	To check remote URLs
 	git remote -v
